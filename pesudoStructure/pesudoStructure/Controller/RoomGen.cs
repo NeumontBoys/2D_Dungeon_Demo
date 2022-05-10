@@ -4,6 +4,12 @@ using System.Text;
 using pesudoStructure.View;
 using pesudoStructure.Model;
 
+/*
+ * NOTE TO SELF
+ *  Make combat and non combat rooms
+ */
+
+
 namespace pesudoStructure.Controller
 {
     class RoomGen
