@@ -2,20 +2,26 @@
 using System.Collections.Generic;
 using System.Text;
 using pesudoStructure.Controller;
+using pesudoStructure.Model;
 
 namespace pesudoStructure.View
 {
     class Display
     {
-        public void DisplayRooms(Dictionary<short, List<Room<Int32>>> listRooms)
+        public void DisplayRooms(Dictionary<short, List<Room<Monsters>>> listRooms)
         {
-            foreach(KeyValuePair<short, List<Room<Int32>>> elm in listRooms)
+            foreach(KeyValuePair<short, List<Room<Monsters>>> elm in listRooms)
             {
                 int counter = 1;
-                foreach(Room<Int32> room in elm.Value)
+                foreach(Room<Monsters> room in elm.Value)
                 {
-                    Console.WriteLine("Region: {0}, Room: {1}, Boss: {2}", elm.Key, counter, room.FinalMonster);
+                    Console.WriteLine("\nRegion: {0}, Room: {1}, Boss: {2}", elm.Key, counter, room.FinalMonster);
                     counter++;
+                    foreach(Monsters mon in room.Monster)
+                    {
+                        Console.Write("{0}, ", mon);
+                    }
+                    Console.WriteLine();
                 }
             }
         }

@@ -10,5 +10,4 @@ C:\Users\sderenski\Documents\codingProjects\2D_Dungeon_Demo\pesudoStructure\pesu
 C:\Users\sderenski\Documents\codingProjects\2D_Dungeon_Demo\pesudoStructure\pesudoStructure\bin\Debug\netcoreapp3.1\pesudoStructure.runtimeconfig.json
 C:\Users\sderenski\Documents\codingProjects\2D_Dungeon_Demo\pesudoStructure\pesudoStructure\bin\Debug\netcoreapp3.1\pesudoStructure.runtimeconfig.dev.json
 C:\Users\sderenski\Documents\codingProjects\2D_Dungeon_Demo\pesudoStructure\pesudoStructure\bin\Debug\netcoreapp3.1\pesudoStructure.pdb
-C:\Users\sderenski\Documents\codingProjects\2D_Dungeon_Demo\pesudoStructure\pesudoStructure\obj\Debug\netcoreapp3.1\pesudoStructure.csproj.AssemblyReference.cache
 C:\Users\sderenski\Documents\codingProjects\2D_Dungeon_Demo\pesudoStructure\pesudoStructure\obj\Debug\netcoreapp3.1\pesudoStructure.genruntimeconfig.cache
