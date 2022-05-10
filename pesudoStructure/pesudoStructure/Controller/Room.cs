@@ -9,14 +9,9 @@ namespace pesudoStructure.Controller
         private List<T> monsters = new List<T>();
         private bool finalMonster = false;
         
-        public List<T> Monster {
-            get { return monsters; }
-        }
+        public List<T> Monster { get { return monsters; } }
 
-        public void MonsterAdd(T val)
-        {
-            monsters.Add(val);
-        }
+        public void MonsterAdd(T val) { monsters.Add(val); }
 
         public bool FinalMonster
         {

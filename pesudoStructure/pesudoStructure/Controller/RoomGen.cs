@@ -54,8 +54,6 @@ namespace pesudoStructure.Controller
             }
         }
 
-        //private void AddingMon()
-
         public void Run()
         {
             Generation();
