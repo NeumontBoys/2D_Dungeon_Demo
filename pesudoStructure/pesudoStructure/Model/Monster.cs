@@ -4,6 +4,7 @@ using System.Text;
 
 namespace pesudoStructure.Model
 {
+    // Public Enum that has values associated to the keys. So you can Cast value to key or vise versa
         public enum Monsters
         {
             // Region 1
@@ -27,8 +28,8 @@ namespace pesudoStructure.Model
 
         public enum FinalMonstors
         {
-            Demon,
-            Two_Headed_Serpent,
-            Cerberus
+            Demon,              // 0
+            Two_Headed_Serpent, // 1
+            Cerberus            // 2
         }
     }

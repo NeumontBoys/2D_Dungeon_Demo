@@ -10,13 +10,18 @@ namespace pesudoStructure.Controller
     {
         private const short REGIONSIZE = 3;
         Random rnd = new Random();
+        // Basic Dictionary. Holds unique key with data values to it. Each key has a list linked to it of rooms.
         private Dictionary<Int16, List<Room<Monsters>>> listOfRooms = new Dictionary<short, List<Room<Monsters>>>();
         private Display view = new Display();
 
+        // Generates the rooms at random. This uses lists to dynamically hold the nodes of rooms
+        // The does for loops to seperate the regions from the rooms
         private void Generation()
         {
+            // Region loop
             for(short i = 0; i < REGIONSIZE; i++)
             {
+                // Rooms in Region. Dumbass. Learn Data Structures nerd
                 List<Room<Monsters>> tempList = new List<Room<Monsters>>();
                 int numRoom = rnd.Next(2, 6);
                 for(int r = 0; r < numRoom; r++)
@@ -30,6 +35,9 @@ namespace pesudoStructure.Controller
             }
         }
 
+        // Breaking up the functions to add the monsters
+        // Uses a switch case to case a random number bounded to a
+        // set range to add the monsters to a list in the Room class
         private void AddingMonster(Room<Monsters> tempRoom, short regionIndex)
         {
             int ranNum = rnd.Next(1, 5);
@@ -54,6 +62,8 @@ namespace pesudoStructure.Controller
             }
         }
 
+        // The run function that links the dictionary structure to the display function
+        // Fuck Matthan. He is too much of a project management.....
         public void Run()
         {
             Generation();
