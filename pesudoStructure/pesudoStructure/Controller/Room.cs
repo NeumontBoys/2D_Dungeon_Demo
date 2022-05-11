@@ -11,16 +11,16 @@ namespace pesudoStructure.Controller
         // creating the object (Used of testing).
         // Setters and getters for the lists and fields..
         private List<T> monsters = new List<T>();
-        private bool finalMonster = false;
+        private T finalMonster;
         
         public List<T> Monster { get { return monsters; } }
 
         public void MonsterAdd(T val) { monsters.Add(val); }
 
-        public bool FinalMonster
+        public T FinalMonster
         {
-            get { return finalMonster; }
             set { finalMonster = value; }
+            get { return finalMonster; }
         }
     }
 }

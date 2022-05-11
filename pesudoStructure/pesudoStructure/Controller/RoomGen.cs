@@ -6,7 +6,8 @@ using pesudoStructure.Model;
 
 /*
  * NOTE TO SELF
- *  Make combat and non combat rooms
+ *  Make combat and non combat rooms... DONE
+ *  Maybe Try a Binary Search Tree for rooms?
  */
 
 
@@ -29,13 +30,18 @@ namespace pesudoStructure.Controller
             {
                 // Rooms in Region. Dumbass. Learn Data Structures nerd
                 List<Room<Monsters>> tempList = new List<Room<Monsters>>();
-                int numRoom = rnd.Next(2, 6);
+                int numRoom = rnd.Next(5, 6);
                 for(int r = 0; r < numRoom; r++)
                 {
                     Room<Monsters> tempRoom = new Room<Monsters>();
-                    AddingMonster(tempRoom, i);
-                    if(r == (numRoom - 1)) { tempRoom.FinalMonster = true; }
+                    if(r == (numRoom - 1)) { tempRoom.FinalMonster = AddingFinal(i); }
+                    if(r != 0 && r != (numRoom - 1))
+                    {
+                        int ranNum = rnd.Next(1, 5);
+                        AddingMonster(tempRoom, i, ranNum);
+                    }
                     tempList.Add(tempRoom);
+
                 }
                 listOfRooms.Add(i, tempList);
             }
@@ -44,9 +50,8 @@ namespace pesudoStructure.Controller
         // Breaking up the functions to add the monsters
         // Uses a switch case to case a random number bounded to a
         // set range to add the monsters to a list in the Room class
-        private void AddingMonster(Room<Monsters> tempRoom, short regionIndex)
+        private void AddingMonster(Room<Monsters> tempRoom, short regionIndex, int ranNum)
         {
-            int ranNum = rnd.Next(1, 5);
             switch(regionIndex)
             {
                 case 0:
@@ -67,6 +72,16 @@ namespace pesudoStructure.Controller
                     } break;
             }
         }
+
+        // Short hand for a function call to be simply a switch case
+        // Creating the bosses for the Final Rooms
+        private Monsters AddingFinal(int regionIndex) => regionIndex switch
+        {
+            0 => (Monsters)105,
+            1 => (Monsters)205,
+            2 => (Monsters)305,
+            _ => default,
+        };
 
         // The run function that links the dictionary structure to the display function
         // Fuck Matthan. He is too much of a project management.....
