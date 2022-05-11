@@ -30,12 +30,13 @@ namespace pesudoStructure.Controller
             {
                 // Rooms in Region. Dumbass. Learn Data Structures nerd
                 List<Room<Monsters>> tempList = new List<Room<Monsters>>();
-                int numRoom = rnd.Next(5, 6);
+                int numRoom = rnd.Next(7, 17);
+                int safeRoom = rnd.Next(4, numRoom);
                 for(int r = 0; r < numRoom; r++)
                 {
                     Room<Monsters> tempRoom = new Room<Monsters>();
                     if(r == (numRoom - 1)) { tempRoom.FinalMonster = AddingFinal(i); }
-                    if(r != 0 && r != (numRoom - 1))
+                    if(r != 0 && r != (numRoom - 1) && r != safeRoom)
                     {
                         int ranNum = rnd.Next(1, 5);
                         AddingMonster(tempRoom, i, ranNum);
