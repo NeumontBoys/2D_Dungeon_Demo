@@ -85,7 +85,7 @@ namespace pesudoStructure.Controller
         };
 
         // The run function that links the dictionary structure to the display function
-        // Fuck Matthan. He is too much of a project management.....
+        // Fuck Matthan. He is too much of a project manager.....
         public void Run()
         {
             Generation();
